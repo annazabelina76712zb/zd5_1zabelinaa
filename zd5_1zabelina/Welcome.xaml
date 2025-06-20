@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zd5_1zabelina.Welcome"
+             Title="Welcome">
+    <ScrollView>
+        <StackLayout Padding="30" VerticalOptions="Center" Spacing="20">
+            <!-- Заголовок -->
+            <Label Text="Welcome" 
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#333333"/>
+
+            <!-- Поле имени пользователя -->
+            <StackLayout Spacing="5">
+                <Label Text="Username" 
+                       FontSize="14"
+                       TextColor="#555555"/>
+
+                <Entry Placeholder="......"
+                       BackgroundColor="White"
+                       HeightRequest="40"
+                       TextColor="#333333"/>
+            </StackLayout>
+
+            <!-- Поле пароля -->
+            <StackLayout Spacing="5">
+                <Label Text="Password" 
+                       FontSize="14"
+                       TextColor="#555555"/>
+
+                <Entry Placeholder="......"
+                       BackgroundColor="White"
+                       HeightRequest="40"
+                       TextColor="#333333"
+                       IsPassword="True"/>
+            </StackLayout>
+
+            <!-- Кнопка входа -->
+            <Button Text="Sign in"
+                    BackgroundColor="Red"
+                    TextColor="White"
+                    CornerRadius="5"
+                    HeightRequest="45"
+                    FontAttributes="Bold"
+                    Clicked="OnSignInClicked"/>
+
+            <!-- Нижние опции -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Чекбокс "Запомнить меня" -->
+                <StackLayout Orientation="Horizontal" Grid.Column="0">
+                    <CheckBox Color="White"
+                              VerticalOptions="Center"/>
+                    <Label Text="Remember me"
+                           VerticalOptions="Center"
+                           Margin="10,0,0,0"
+                           TextColor="White"/>
+                </StackLayout>
+
+                <!-- Ссылка "Забыл пароль" -->
+                <Label Text="I forgot!"
+                       Grid.Column="1"
+                       HorizontalOptions="End"
+                       TextColor="White"
+                       FontAttributes="Italic">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnForgotPasswordTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

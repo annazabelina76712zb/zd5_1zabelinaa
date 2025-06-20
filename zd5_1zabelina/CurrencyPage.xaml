@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zd5_1zabelina.CurrencyPage"
+              Title="Курсы валют">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15" BackgroundColor="White">
+
+            <!-- Блок с курсами -->
+            <Frame BorderColor="#1E90FF"
+                   CornerRadius="10"
+                   Padding="15"
+                   BackgroundColor="White"
+                   HasShadow="False">
+                <StackLayout Spacing="8">
+                    <Label Text="Центробанк РФ:"
+                           FontAttributes="Bold"
+                           TextColor="Black"/>
+
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Label Text="USD"
+                               FontAttributes="Bold"
+                               TextColor="Black"/>
+                        <Label x:Name="usdLabel"
+                               Text="80.000"
+                               TextColor="Black"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Label Text="EUR"
+                               FontAttributes="Bold"
+                               TextColor="Black"/>
+                        <Label x:Name="eurLabel"
+                               Text="86.000"
+                               TextColor="Black"/>
+                    </StackLayout>
+
+                    <BoxView HeightRequest="1" 
+                             BackgroundColor="LightGray"
+                             HorizontalOptions="FillAndExpand"
+                             Margin="0,10,0,10"/>
+
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Label Text="Текущая дата:"
+                               FontAttributes="Bold"
+                               TextColor="Black"/>
+                        <Label x:Name="dateLabel"
+                               Text="29/05/2023"
+                               TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- Кнопка обновления -->
+            <Button Text="Обновить курсы"
+                    Clicked="OnUpdateRatesClicked"
+                    BackgroundColor="#1E90FF"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HorizontalOptions="Center"
+                    WidthRequest="200"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

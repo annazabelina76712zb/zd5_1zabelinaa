@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zd5_1zabelina.CreditPage"
+              Title="Кредитный калькулятор">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15" BackgroundColor="White">
+
+
+            <!-- Форма ввода -->
+            <StackLayout Spacing="10">
+                <Label Text="Сумма кредита:"
+                       TextColor="Black"/>
+                <Entry x:Name="amountEntry" 
+                       Placeholder="Введите сумму"
+                       TextColor="Black"
+                       BackgroundColor="#E6F7FF"/>
+
+                <Label Text="Срок (месяцев):"
+                       TextColor="Black"/>
+                <Picker x:Name="termPicker"
+                        Title="Выберите срок"
+                        TextColor="Black"
+                        BackgroundColor="#E6F7FF">
+                    <Picker.Items>
+                        <x:String>6</x:String>
+                        <x:String>12</x:String>
+                        <x:String>24</x:String>
+                        <x:String>36</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Вид платежа:"
+                       TextColor="Black"/>
+                <Picker x:Name="paymentTypePicker"
+                        Title="Выберите тип"
+                        TextColor="Black"
+                        BackgroundColor="White">
+                    <Picker.Items>
+                        <x:String>Аннуитетный</x:String>
+                        <x:String>Дифференцированный</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Процентная ставка:"
+                       TextColor="Black"/>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label Text="5%"
+                           TextColor="Black"
+                           VerticalOptions="Center"/>
+                    <Slider x:Name="rateSlider"
+                            Minimum="0.0"
+                            Maximum="90.0"
+                            Value="10.0"
+                            MinimumTrackColor="#1E90FF"
+                            MaximumTrackColor="LightGray"
+                            ThumbColor="#1E90FF"
+                            HorizontalOptions="FillAndExpand"/>
+                    <Label Text="90%"
+                           TextColor="Black"
+                           VerticalOptions="Center"/>
+                </StackLayout>
+                <Label x:Name="rateValueLabel"
+                       Text="Текущая ставка: 10%"
+                       TextColor="Black"
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <!-- Результаты -->
+            <StackLayout Spacing="8" Margin="0,20,0,0">
+                <Label x:Name="monthlyPaymentLabel"
+                       Text="Ежемесячный платеж: ..."
+                       TextColor="Black"/>
+
+                <Label x:Name="totalPaymentLabel"
+                       Text="Общая сумма: ..."
+                       TextColor="Black"/>
+
+                <Label x:Name="overpaymentLabel"
+                       Text="Переплата: ..."
+                       TextColor="Black"/>
+            </StackLayout>
+
+            <!-- Кнопка расчета -->
+            <Button Text="Рассчитать"
+                    Clicked="OnCalculateClicked"
+                    BackgroundColor="#1E90FF"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Margin="0,20,0,0"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

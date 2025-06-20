@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "gzW6By3ECOfbty06m3Y+d/DbDDp2VJ2QM8rysFz0sHMocfxQfQCERf3PhKHYzgvzPZ1ry9OPyZr0CzAXu22Puw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\st310-11\\Downloads\\zd5_1zabelina\\zd5_1zabelina\\zd5_1zabelina.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\st310-11\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\st310-11\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\st310-11\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\st310-11\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\st310-11\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
